@@ -22,7 +22,8 @@ puts elements.keys.join(', ')
 
 # Спросим пользователя, о каком элементе он хочет узнать
 puts 'О каком элементе хотите узнать?'
-element = gets.chomp
+element_input = gets.chomp
+element = element_input[0].upcase + element_input[1..-1].downcase
 
 # Если такой элемент есть в нашем хэше, покажем информацию о нём
 if elements.key?(element)
